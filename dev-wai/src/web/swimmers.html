@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Swimmig</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" />
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <a href="">SWIMMERS</a>
+                        <ul>
+                            <li><a href="swimmers.html">Michael Phelps</a></li>
+                            <li><a href="swimmers.html">Caeleb Dressel</a></li>
+                            <li><a href="swimmers.html">Katie Ledecky</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>World's famous swimmers</h1>
+    </section>
+    <!--Swimmers-->
+    <section class="swimmers">
+        <h1>Most famous swimmers in the world 3</h1>
+        <div class="row">
+            <div class="swimmers-col">
+                <h3>Michael Phelps</h3>
+                <p>is an American former competitive swimmer. He is the most successful and most decorated Olympian of all time with a total of 28 medals.</p>
+            </div>
+            <div class="swimmers-col">
+                <h3>Caeleb Dressel</h3>
+                <p> is an American professional swimmer who specializes in freestyle, butterfly, and individual medley events. He swims representing the Cali Condors as part of the International Swimming League.</p>
+            </div>
+            <div class="swimmers-col">
+                <h3>Katie Ledecky</h3>
+                <p> is an American competitive swimmer. She has won seven Olympic gold medals and 19 world championship gold medals, the most in history for a female swimmer.</p>
+            </div>
+        </div>
+    </section>
+
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+
+
+
+
+    <!--Footer-->
+    <section class="footer">
+        <h4>About me</h4>
+        <p>Julita Zamroczyńska gr.1  193235</p>
+        <svg height="210" width="500" class="line">
+            <line x1="0" y1="0" x2="5000" y2="0" />
+        </svg>
+    </section>
+
+
+    <!---JavaScript for Menu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+</body>
+</html>
