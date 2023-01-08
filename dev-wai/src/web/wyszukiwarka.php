@@ -1,15 +1,24 @@
-﻿<!DOCTYPE html>
+<?php session_start(); 
+      include_once 'functions.php';
+?>
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Moje Hobby</title>
 
-<html>
-<head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
-    <title>Swimmig</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" />
-</head>
+        <script src="script.js"></script>        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="jquery.min.js"></script>                    
+        <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="noscript_style.css">
+        </noscript>
+        
+      </head>
 <body>
     <section class="sub-header">
         <nav>
@@ -37,27 +46,19 @@
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
-        <h1>World's famous swimmers</h1>
+        <h1>Wyszukiwarka</h1>
     </section>
-    <!--Swimmers-->
-    <section class="swimmers">
-        <h1>Most famous swimmers in the world 3</h1>
-        <div class="row">
-            <div class="swimmers-col">
-                <h3>Michael Phelps</h3>
-                <p>is an American former competitive swimmer. He is the most successful and most decorated Olympian of all time with a total of 28 medals.</p>
-            </div>
-            <div class="swimmers-col">
-                <h3>Caeleb Dressel</h3>
-                <p> is an American professional swimmer who specializes in freestyle, butterfly, and individual medley events. He swims representing the Cali Condors as part of the International Swimming League.</p>
-            </div>
-            <div class="swimmers-col">
-                <h3>Katie Ledecky</h3>
-                <p> is an American competitive swimmer. She has won seven Olympic gold medals and 19 world championship gold medals, the most in history for a female swimmer.</p>
-            </div>
-        </div>
-    </section>
-    
+    <?php
+      ifuserLogged();
+    ?>
+
+    <form>
+        <input type="text" name="search" placeholder="Wyszukaj..." onkeypress="search_by_title()"><br/><br/>
+    </form>   
+
+      <?php
+        include 'upload_view.php';
+      ?>
 
     <!--Footer-->
     <section class="footer">
@@ -80,7 +81,7 @@
             navLinks.style.right = "-200px";
         }
     </script>
-
-
+  </div>
 </body>
+        
 </html>
