@@ -8,7 +8,7 @@ $users = $db->users->find();
 
 echo "<h3>Images</h3>";
 foreach ($images as $image) {
-   // $db->images->deleteOne($image);
+  //  $db->images->deleteOne($image);
  echo "title: ".$image['title']."<br/>";
  echo "author: ".$image['author']."<br/>";
  echo "status: ".$image['status']."<br/>";
@@ -17,7 +17,7 @@ foreach ($images as $image) {
 
 echo "<h3>Users</h3>";
 foreach ($users as $user) {
-   // $db->images->deleteOne($image);
+   //$db->users->deleteOne($user);
  echo "email: ".$user['email']."<br/>";
  echo "username: ".$user['username']."<br/>";
  echo "password: ".$user['password']."<br/>";

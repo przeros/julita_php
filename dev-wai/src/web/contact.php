@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+<?php session_start();
+  include_once 'functions.php';
+?>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -14,25 +17,26 @@
 <body>
     <section class="sub-header">
         <nav>
-            <a href="index.html"><img src="img/logo.png" /></a>
+            <a href="index.php"><img src="img/logo.png" /></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
                     <li><a href="">SWIMMERS</a>
                         <ul>
-                            <li><a href="swimmers.html">Michael Phelps</a></li>
-                            <li><a href="swimmers.html">Caeleb Dressel</a></li>
-                            <li><a href="swimmers.html">Katie Ledecky</a></li>
+                            <li><a href="swimmers.php">Michael Phelps</a></li>
+                            <li><a href="swimmers.php">Caeleb Dressel</a></li>
+                            <li><a href="swimmers.php">Katie Ledecky</a></li>
                         </ul>
                     </li>
                     <li><a href="galeria.php">Galeria</a></li>
                     <li><a href="wyszukiwarka.php">Wyszukiwarka</a></li>
-                    <li><a href="register.php">Zarejestruj się</a></li>
-                    <li><a href="login_view.php">Zaloguj</a></li>
-                    <li><a href="logout.php">Wyloguj się</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="register.php">Zarejestruj</a></li>
+                    <?php
+                        loginHide();
+                    ?>
+                    <li><a href="contact.php">CONTACT</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -48,7 +52,7 @@
             <div class="contact-col">
                 <div>
                     <i class="fa fa-home"></i>
-                        <h5>J.Trzcińskiego 2</h5>
+                        <h5>J.Trzcinskiego 2</h5>
                         <p> 88-300 Mogilno</p>
                 </div>
                 <div>

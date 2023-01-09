@@ -27,12 +27,23 @@ function loginHide()
 {
     if(isset($_SESSION['username']))
                 {
-                  echo '<a href="logout.php">Wyloguj się</a>';
+                  echo '<li><a href="logout.php">Wyloguj</a></li>';
                 }
                 else
                 {
-                  echo '<a href="login_view.php">Zaloguj</a>';
+                  echo '<li><a href="login_view.php">Zaloguj</a></li>';
                 }
+}
+
+function showFooter()
+{
+  echo '<section class="footer">
+         <h4>About me</h4>
+         <p>Julita Zamroczyńska gr.1  193235</p>
+         <svg height="210" width="500" class="line">
+             <line x1="0" y1="0" x2="5000" y2="0" />
+         </svg>
+     </section>';
 }
 
 function create_thumbnail($path, $save, $width, $height)

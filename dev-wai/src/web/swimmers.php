@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+<?php session_start();
+  include_once 'functions.php';
+?>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -13,26 +16,27 @@
 <body>
     <section class="sub-header">
         <nav>
-            <a href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+            <a href="index.php"><img src="img/logo.png" alt="Logo" /></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
                     <li>
                         <a href="">SWIMMERS</a>
                         <ul>
-                            <li><a href="swimmers.html">Michael Phelps</a></li>
-                            <li><a href="swimmers.html">Caeleb Dressel</a></li>
-                            <li><a href="swimmers.html">Katie Ledecky</a></li>
+                            <li><a href="swimmers.php">Michael Phelps</a></li>
+                            <li><a href="swimmers.php">Caeleb Dressel</a></li>
+                            <li><a href="swimmers.php">Katie Ledecky</a></li>
                         </ul>
                     </li>
                     <li><a href="galeria.php">Galeria</a></li>
                     <li><a href="wyszukiwarka.php">Wyszukiwarka</a></li>
-                    <li><a href="register.php">Zarejestruj się</a></li>
-                    <li><a href="login_view.php">Zaloguj</a></li>
-                    <li><a href="logout.php">Wyloguj się</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="register.php">Zarejestruj</a></li>
+                    <?php
+                        loginHide();
+                    ?>
+                    <li><a href="contact.php">CONTACT</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -41,7 +45,7 @@
     </section>
     <!--Swimmers-->
     <section class="swimmers">
-        <h1>Most famous swimmers in the world 3</h1>
+        <h1>Most famous swimmers in the world</h1>
         <div class="row">
             <div class="swimmers-col">
                 <h3>Michael Phelps</h3>
@@ -60,13 +64,7 @@
     
 
     <!--Footer-->
-    <section class="footer">
-        <h4>About me</h4>
-        <p>Julita Zamroczyńska gr.1  193235</p>
-        <svg height="210" width="500" class="line">
-            <line x1="0" y1="0" x2="5000" y2="0" />
-        </svg>
-    </section>
+    <?php showFooter() ?>
 
 
     <!---JavaScript for Menu-->
